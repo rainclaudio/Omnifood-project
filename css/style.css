@@ -166,9 +166,9 @@
   filter: brightness(0);
   opacity: 50%;
 }
-/*******************/
-/*SECTION HOW IT WORKS*/
-/*******************/
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
 .section-how {
   padding: 9.6rem 0;
 }
@@ -187,6 +187,7 @@
 }
 .step-image-box {
   position: relative;
+  
   display: flex;
   align-items: center;
   justify-content: center;

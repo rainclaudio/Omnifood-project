@@ -2,17 +2,14 @@
 
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
-try{
-  const btnNavEl = document.querySelector(".btn-mobile-nav");
-  const headerEl = document.querySelector(".header");
-  
-  btnNavEl.addEventListener("click", function () {
-    headerEl.classList.toggle("nav-open");
-  });
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
 
-} catch(error) {
-  console.log(error)
-}
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
+
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
 
