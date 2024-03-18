@@ -1,4 +1,4 @@
 # Omnifood-project
-
-
-This is one of my learning projects where I apply a lot of CSS and HTML concepts 
+Topics covered:
+1. Responsive web design
+2. Optimizations

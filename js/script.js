@@ -1,18 +1,18 @@
-///////////////////////////////////////////////////////////
-// Set current year
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
+
 
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
+try{
+  const btnNavEl = document.querySelector(".btn-mobile-nav");
+  const headerEl = document.querySelector(".header");
+  
+  btnNavEl.addEventListener("click", function () {
+    headerEl.classList.toggle("nav-open");
+  });
 
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-});
-
+} catch(error) {
+  console.log(error)
+}
 ///////////////////////////////////////////////////////////
 // Smooth scrolling animation
 
