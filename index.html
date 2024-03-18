@@ -3,18 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
 
-    <title>Omnifood</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
 
   <body>
@@ -23,19 +47,19 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
-            <a class="main-nav-link" href="#">Section 1</a>
+            <a class="main-nav-link" href="#how">How it works</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#">Section 2</a>
+            <a class="main-nav-link" href="#meals">Meals</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#">Section 3</a>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#">Section 4</a>
+            <a class="main-nav-link" href="#pricing">Pricing</a>
           </li>
           <li>
-            <a class="main-nav-link nav-cta" href="#">Section 5</a>
+            <a class="main-nav-link nav-cta" href="#cta">Try it for free</a>
           </li>
         </ul>
       </nav>
@@ -101,7 +125,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container center-text">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -177,7 +201,7 @@
         <!--Copye line down: opt + shift + down arrow-->
       </section>
 
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Sample meals</span>
           <h2 class="heading-secondary">
@@ -298,7 +322,7 @@
         </div>
       </section>
 
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonial-container">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -412,7 +436,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading"> Pricing </span>
           <h2 class="heading-secondary">Eating without breaking the bank</h2>
@@ -532,7 +556,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="grid-cta">
             <div class="email-part">
