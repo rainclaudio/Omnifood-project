@@ -441,105 +441,89 @@
 .section-cta {
   padding: 4.8 0 12.8rem;
 }
-.grid-cta *:focus {
-  outline: none;
-  /* outline: 4px dotted #e67e22;
-    outline-offset: 8px; */
-  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
-}
-.cta-image {
-  display: block;
-  width: 100%;
-}
-.grid-cta {
-  display: grid;
+.cta {
+display: grid;
+  /* 2/3 = 66.6% + 1/3 = 33.3% */
   grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
-  background-image: linear-gradient(#eb984e, #e67e22);
+
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
 }
-.cta-image {
-  background-image: linear-gradient(
-      rgba(235, 151, 78, 0.35),
-      rgba(231, 126, 35, 0.35)
-    ),
-    url("../img/eating.jpg");
-  /*esto hace que la imagen fits into the
-  background*/
-  background-size: cover;
-  background-position: center;
-}
-/*
-section cta part 2
-*/
-.email-part {
+.cta-text-box{
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
-  color: #2e1907;
+    color: #45260a;
 }
-.grid-cta .heading-secondary {
-  color: #2e1907;
+.cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit;
   margin-bottom: 3.2rem;
 }
-.email-part p {
+.cta-text {
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 4.8rem;
 }
-.email-part-form {
+.cta-img-box {
+  background-image: linear-gradient(to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.cta-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
-  color: #2e1907;
 }
-/*
-section cta part 3: style form
-*/
-.email-part-form label {
+
+.cta-form label {
   display: block;
   font-size: 1.6rem;
-  color: #2e1907;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
-.email-part-form input,
-select {
+
+.cta-form input,
+.cta-form select {
   width: 100%;
-  border-radius: 9px;
-  border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-
-  background-color: #fdf2e9;
   padding: 1.2rem;
-
   font-size: 1.8rem;
-  color: inherit;
   font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.email-part-form select::placeholder {
-  color: #333;
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 /******************************/
 /*     FOOTER SECTION         */
 /*****************************/
-footer {
-  padding: 12rem;
+.footer {
+  padding: 12.8rem 0;
   border-top: 1px solid #eee;
   margin-top: 15rem;
 }
-.grid-footer {
-  display: grid;
+.grid--footer {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
-  /* Importante: esto le añade anchura a las lineas
-   de los grids*/
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
+  display: grid;
 }
-/*
-First part - Foorter main
-*/
+
 .logo-col {
   display: flex;
   flex-direction: column;
@@ -548,31 +532,51 @@ First part - Foorter main
   display: block;
   margin-bottom: 3.2rem;
 }
+
 .social-links {
   list-style: none;
   display: flex;
-  flex-direction: row;
   gap: 2.4rem;
 }
+
 .social-icon {
   width: 2.4rem;
   height: 2.4rem;
-  color: #6f6f6f;
 }
-.social-icon:hover {
-  color: #555;
-}
+
+
 .copyright {
   font-size: 1.4rem;
   line-height: 1.6;
   color: #767676;
   margin-top: auto;
 }
-
-.footer-title {
+.footer-heading {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 4rem;
+}
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.address {
+  margin-bottom: 2.4rem;
+}
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
 }
 .footer-list {
   list-style: none;
@@ -589,8 +593,7 @@ First part - Foorter main
   color: inherit;
   transition: all 3ms;
 }
-.icon-list {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22;
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }

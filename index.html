@@ -42,35 +42,28 @@
   </head>
 
   <body>
-    <header class="header">
-      <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+ <header class="header">
+      <a href="#">
+        <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+      </a>
+
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li>
-            <a class="main-nav-link" href="#how">How it works</a>
-          </li>
-          <li>
-            <a class="main-nav-link" href="#meals">Meals</a>
-          </li>
+          <li><a class="main-nav-link" href="#how">How it works</a></li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
           <li>
             <a class="main-nav-link" href="#testimonials">Testimonials</a>
           </li>
-          <li>
-            <a class="main-nav-link" href="#pricing">Pricing</a>
-          </li>
-          <li>
-            <a class="main-nav-link nav-cta" href="#cta">Try it for free</a>
-          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
         </ul>
       </nav>
 
-      
       <button class="btn-mobile-nav">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
     </header>
-
     <main>
       <section class="section-hero">
         <div class="hero">
@@ -90,12 +83,12 @@
 
             <div class="delivered-meals">
               <div class="delivered-imgs">
-                <img src="img/customers/customer-1.jpg" alt="Customer-photo" />
-                <img src="img/customers/customer-2.jpg" alt="Customer-photo" />
-                <img src="img/customers/customer-3.jpg" alt="Customer-photo" />
-                <img src="img/customers/customer-4.jpg" alt="Customer-photo" />
-                <img src="img/customers/customer-5.jpg" alt="Customer-photo" />
-                <img src="img/customers/customer-6.jpg" alt="Customer-photo" />
+                <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-6.jpg" alt="Customer photo" />
               </div>
               <p class="delivered-text">
                 <span> 250,000+ </span>
@@ -104,11 +97,16 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
-              class="hero-img"
-              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -140,7 +138,6 @@
         </div>
 
         <div class="container grid grid--2-cols grid--center-v">
-
           <!-- STEP 01  -->
           <div class="step-text-box">
             <p class="step-number">01</p>
@@ -201,7 +198,6 @@
             />
           </div>
         </div>
-
       </section>
 
       <section class="section-meals" id="meals">
@@ -561,16 +557,16 @@
 
       <section class="section-cta" id="cta">
         <div class="container">
-          <div class="grid-cta">
-            <div class="email-part">
+          <div class="cta">
+            <div class="cta-text-box">
               <h2 class="heading-secondary">Get your first meal for free!</h2>
-              <p>
+              <p class="cta-text">
                 Healthy, tasty and hassle-free meals are waiting for you. Start
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </p>
 
-              <form class="email-part-form" name="sign-up" method="POST" netlify>
+              <form class="cta-form" name="sign-up" method="POST" netlify>
                 <!-- for attribute is to make it clickable -->
                 <div>
                   <label for="full-name">Full Name</label>
@@ -594,30 +590,29 @@
                 </div>
                 <div>
                   <label for="select-hear">Where did you hear from us?</label>
-                  <select 
-                    id="select-where" 
-                    name="select-where"
-                    required>
+                  <select id="select-where" name="select-where" required>
                     <option value="">Please choose one option</option>
-                    <option value="option-friends">Friends and family</option>
-                    <option value="option-podcast">Podcasts</option>
-                    <option value="option-facebook">Facebook add</option>
-                    <option value="option-other">Others</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="podcast">Podcasts</option>
+                    <option value="facebook">Facebook add</option>
+                    <option value="others">Others</option>
                   </select>
                 </div>
                 <button class="btn btn--form">Sign up now</button>
               </form>
             </div>
 
-            <div class="cta-image" role="img" aria-label="Woman enjoying food">
-              <!-- <img src="img/eating.jpg" alt="woman-eating-email-image" /> -->
-            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
           </div>
         </div>
       </section>
 
-      <footer>
-        <div class="container grid-footer">
+      <footer class="footer">
+        <div class="container grid grid--footer">
           <div class="logo-col">
             <a href="#" class="footer-logo">
               <img
@@ -652,82 +647,48 @@
               Copyright &copy; 2027 by Omnifood, Inc. All rights reserved.
             </p>
           </div>
-          <div class="footer-col">
-            <p class="footer-title">Contact us</p>
-            <ul class="footer-list">
-              <li class="footer-list-item">
-                Address: 623 Harrison St., 2nd Floor, San Francisco, CA 94107
-              </li>
-              <li class="footer-list-item">
-                <a
-                  href="tel:415-201-6370"
-                  style="text-decoration: none; color: inherit"
-                  >415-201-6370</a
-                >
-              </li>
-              <li class="footer-list-item">
-                <a
-                  href="mailto: hello@omnifood.com"
-                  style="text-decoration: none; color: inherit"
+
+          <div class="address-col">
+            <p class="footer-heading">Contact us</p>
+            <address class="contacts">
+              <p class="address">
+                623 Harrison St., 2nd Floor, San Francisco, CA 94107
+              </p>
+              <p>
+                <a class="footer-link" href="tel:415-201-6370">415-201-6370</a
+                ><br />
+                <a class="footer-link" href="mailto:hello@omnifood.com"
                   >hello@omnifood.com</a
                 >
-              </li>
+              </p>
+            </address>
+          </div>
+
+          <div class="nav-col">
+            <p class="footer-heading">Account</p>
+            <ul class="footer-nav">
+              <li><a href="#" class="footer-link"> Create account </a></li>
+              <li><a href="#" class="footer-link"> Sign in </a></li>
+              <li><a href="#" class="footer-link"> iOS app </a></li>
+              <li><a href="#" class="footer-link"> Android app </a></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <p class="footer-title">Account</p>
+          <div class="nav-col">
+            <p class="footer-heading">Company</p>
             <ul class="footer-list">
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Create account </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Sign in </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> iOS app </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Android app </a>
-              </li>
+              <li><a href="#" class="footer-link"> About Omnifood </a></li>
+              <li><a href="#" class="footer-link"> For Business </a></li>
+              <li><a href="#" class="footer-link"> Cooking partners </a></li>
+              <li><a href="#" class="footer-link"> Careers </a></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <p class="footer-title">Company</p>
+
+          <div class="nav-col">
+            <p class="footer-heading">Resources</p>
             <ul class="footer-list">
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> About Omnifood </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> For Business </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Cooking partners </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Careers </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <p class="footer-title">Resources</p>
-            <ul class="footer-list">
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Recipe directory </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Help center </a>
-              </li>
-
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-item-a"> Privacy & terms </a>
-              </li>
+              <li><a href="#" class="footer-link"> Recipe directory </a></li>
+              <li><a href="#" class="footer-link"> Help center </a></li>
+              <li><a href="#" class="footer-link"> Privacy & terms </a></li>
             </ul>
           </div>
         </div>
