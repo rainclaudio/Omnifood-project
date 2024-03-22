@@ -185,7 +185,7 @@
   font-size: 1.8rem;
   line-height: 1.8;
 }
-.step-image-box {
+.step-img-box {
   position: relative;
   
   display: flex;
@@ -193,8 +193,8 @@
   justify-content: center;
 }
 
-.step-image-box::before,
-.step-image-box::after {
+.step-img-box::before,
+.step-img-box::after {
   content: "";
   display: block;
 
@@ -206,7 +206,7 @@
   transform: translate(-50%, -50%);
 }
 
-.step-image-box::before {
+.step-img-box::before {
   width: 60%;
   /* height: 60%; */
   /* 60% of parent width */
@@ -214,7 +214,7 @@
   background-color: #fdf2e9;
   z-index: -2;
 }
-.step-image-box::after {
+.step-img-box::after {
   width: 45%;
   padding-bottom: 45%;
   background-color: #fae5d3;
